@@ -2,6 +2,7 @@ package com.geovanycode.command.user;
 
 import com.geovanycode.command.CommandHandler;
 import com.geovanycode.domain.User;
+import com.geovanycode.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Component;
 
