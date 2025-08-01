@@ -1,8 +1,8 @@
-package com.geovanycode.command.user;
+package com.geovanycode.application.command.user;
 
-import com.geovanycode.command.CommandHandler;
-import com.geovanycode.domain.User;
-import com.geovanycode.repository.UserRepository;
+import com.geovanycode.application.command.CommandHandler;
+import com.geovanycode.domain.model.Person;
+import com.geovanycode.domain.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Component;
 
@@ -17,8 +17,8 @@ public class CreateUserCommandHandler implements CommandHandler<CreateUserComman
     @Override
     @Transactional
     public Long handle(CreateUserCommand command) {
-        User user = new User(command.name(), command.email());
-        User savedUser = userRepository.save(user);
-        return savedUser.getId();
+        Person person = new Person(command.name(), command.email());
+        Person savedPerson = userRepository.save(person);
+        return savedPerson.getId();
     }
 }

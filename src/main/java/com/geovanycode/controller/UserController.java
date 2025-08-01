@@ -1,9 +1,9 @@
 package com.geovanycode.controller;
 
-import com.geovanycode.command.user.CreateUserCommand;
+import com.geovanycode.application.command.user.CreateUserCommand;
 import com.geovanycode.dto.UserDto;
-import com.geovanycode.mediator.Mediator;
-import com.geovanycode.query.user.GetUsersQuery;
+import com.geovanycode.application.mediator.Mediator;
+import com.geovanycode.application.query.user.GetUsersQuery;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

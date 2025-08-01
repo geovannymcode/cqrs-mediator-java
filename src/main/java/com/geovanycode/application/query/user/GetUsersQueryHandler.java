@@ -1,8 +1,8 @@
-package com.geovanycode.query.user;
+package com.geovanycode.application.query.user;
 
 import com.geovanycode.dto.UserDto;
-import com.geovanycode.query.QueryHandler;
-import com.geovanycode.repository.UserRepository;
+import com.geovanycode.application.query.QueryHandler;
+import com.geovanycode.domain.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Component;
 

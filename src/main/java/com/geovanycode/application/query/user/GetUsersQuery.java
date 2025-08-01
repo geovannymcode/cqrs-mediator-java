@@ -1,7 +1,7 @@
-package com.geovanycode.query.user;
+package com.geovanycode.application.query.user;
 
 import com.geovanycode.dto.UserDto;
-import com.geovanycode.query.Query;
+import com.geovanycode.application.query.Query;
 
 import java.util.List;
 
