@@ -1,7 +1,7 @@
 package com.geovanycode.controller;
 
 import com.geovanycode.application.command.user.CreateUserCommand;
-import com.geovanycode.dto.UserDto;
+import com.geovanycode.application.dto.PersonDto;
 import com.geovanycode.application.mediator.Mediator;
 import com.geovanycode.application.query.user.GetUsersQuery;
 import org.springframework.http.ResponseEntity;
@@ -29,8 +29,8 @@ public class UserController {
     }
 
     @GetMapping
-    public ResponseEntity<List<UserDto>> getUsers() {
-        List<UserDto> users = mediator.send(new GetUsersQuery());
+    public ResponseEntity<List<PersonDto>> getUsers() {
+        List<PersonDto> users = mediator.send(new GetUsersQuery());
         return ResponseEntity.ok(users);
     }
 }
