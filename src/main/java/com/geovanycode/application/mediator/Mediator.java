@@ -1,9 +1,9 @@
 package com.geovanycode.application.mediator;
 
 import com.geovanycode.application.command.Command;
-import com.geovanycode.application.command.CommandHandler;
+import com.geovanycode.application.command.handler.CommandHandler;
 import com.geovanycode.application.query.Query;
-import com.geovanycode.application.query.QueryHandler;
+import com.geovanycode.application.query.handler.QueryHandler;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
