@@ -18,7 +18,7 @@ public class Mediator {
     public <R, C extends Command<R>> R send(C command) {
         Class<?> commandClass = command.getClass();
         String handlerName = commandClass.getSimpleName() + "Handler";
-        String handlerPackage = commandClass.getPackageName();
+        String handlerPackage = commandClass.getPackageName().replace("command", "command.handler");
         String handlerFullName = handlerPackage + "." + handlerName;
 
         try {
@@ -34,7 +34,7 @@ public class Mediator {
     public <R, Q extends Query<R>> R send(Q query) {
         Class<?> queryClass = query.getClass();
         String handlerName = queryClass.getSimpleName() + "Handler";
-        String handlerPackage = queryClass.getPackageName();
+        String handlerPackage = queryClass.getPackageName().replace("query", "query.handler");
         String handlerFullName = handlerPackage + "." + handlerName;
 
         try {
